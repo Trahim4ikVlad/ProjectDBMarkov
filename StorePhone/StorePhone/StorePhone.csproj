@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4053B1A-674F-4877-B748-5622028B99A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StorePhone</RootNamespace>
+    <AssemblyName>StorePhone</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddingForm.Designer.cs">
+      <DependentUpon>AddingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>StorePhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EditClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClientsForm.Designer.cs">
+      <DependentUpon>EditClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmployeeForm.Designer.cs">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOrdersForm.Designer.cs">
+      <DependentUpon>EditOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPhonesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPhonesForm.Designer.cs">
+      <DependentUpon>EditPhonesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSpecForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSpecForm.Designer.cs">
+      <DependentUpon>EditSpecForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>StorePhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExecuteOrderForm.Designer.cs">
+      <DependentUpon>ExecuteOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <DependentUpon>StorePhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>StorePhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Producer.cs">
+      <DependentUpon>StorePhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchingForm.Designer.cs">
+      <DependentUpon>SearchingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Specification.cs">
+      <DependentUpon>StorePhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StorePhoneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StorePhoneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StorePhoneDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StorePhoneDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StorePhoneDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StorePhoneDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StorePhoneDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StorePhoneDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StorePhoneModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StorePhoneModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StorePhoneModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StorePhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StorePhoneModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StorePhoneModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>StorePhoneModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForm.Designer.cs">
+      <DependentUpon>ViewForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddingForm.resx">
+      <DependentUpon>AddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClientsForm.resx">
+      <DependentUpon>EditClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEmployeeForm.resx">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOrdersForm.resx">
+      <DependentUpon>EditOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPhonesForm.resx">
+      <DependentUpon>EditPhonesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSpecForm.resx">
+      <DependentUpon>EditSpecForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecuteOrderForm.resx">
+      <DependentUpon>ExecuteOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchingForm.resx">
+      <DependentUpon>SearchingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm.resx">
+      <DependentUpon>ViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Employee.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="StorePhoneModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StorePhoneModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="StorePhoneDataSet.xsc">
+      <DependentUpon>StorePhoneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StorePhoneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StorePhoneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StorePhoneDataSet.xss">
+      <DependentUpon>StorePhoneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StorePhoneDataSet1.xsc">
+      <DependentUpon>StorePhoneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="StorePhoneDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StorePhoneDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StorePhoneDataSet1.xss">
+      <DependentUpon>StorePhoneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="StorePhoneDataSet2.xsc">
+      <DependentUpon>StorePhoneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="StorePhoneDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StorePhoneDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StorePhoneDataSet2.xss">
+      <DependentUpon>StorePhoneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="StorePhoneDataSet3.xsc">
+      <DependentUpon>StorePhoneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="StorePhoneDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StorePhoneDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StorePhoneDataSet3.xss">
+      <DependentUpon>StorePhoneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="StorePhoneModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StorePhoneModel.edmx</DependentUpon>
+      <LastGenOutput>StorePhoneModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="StorePhoneModel.edmx.diagram">
+      <DependentUpon>StorePhoneModel.edmx</DependentUpon>
+    </None>
+    <None Include="StorePhoneModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StorePhoneModel.edmx</DependentUpon>
+      <LastGenOutput>StorePhoneModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly.jpg" />
+    <None Include="Resources\Logo_fly.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fly3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безымянный.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rem-work6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rem-work61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %287%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %288%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %2810%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %289%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %2811%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\загруженное %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\загруженное %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %2811%291.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
